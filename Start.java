@@ -9,9 +9,11 @@ public class Start {
         cmd=Utils.cache(cmd);
         cmd.doubleValue();
         cmd.doubleValue();
+        System.out.println("Изменение знаменателя с 2 на 5 ");
         cmd.setDenum(5);
         cmd.doubleValue();
         cmd.doubleValue();
+        System.out.println("Изменение числителя с 1 на 2 ");
         cmd.setNum(2);
         cmd.doubleValue();
         cmd.doubleValue();
