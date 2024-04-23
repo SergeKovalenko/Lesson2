@@ -1,8 +1,6 @@
 package Lesson2;
 import lombok.ToString;
 
-import java.lang.reflect.Proxy;
-import java.util.*;
 public class Start {
     public static void main(String... args) {
         Able cmd = new A(1,2);
@@ -11,12 +9,15 @@ public class Start {
         cmd.doubleValue();
         System.out.println("Изменение знаменателя с 2 на 5 ");
         cmd.setDenum(5);
+        System.out.println();
+        cmd.doubleValue();
         cmd.doubleValue();
         cmd.doubleValue();
         System.out.println("Изменение числителя с 1 на 2 ");
         cmd.setNum(2);
         cmd.doubleValue();
         cmd.doubleValue();
+
 
     }
 }
@@ -31,7 +32,7 @@ class A implements Able{
         this.denum = denum;
     }
 
-    @Override  @Cache
+    @Override   @Cache
     public double doubleValue() {
         System.out.println((double) num/denum);
         return (double) num/denum;
@@ -46,4 +47,6 @@ class A implements Able{
     public void setDenum(int denum) {
         this.denum = denum;
     }
+
+
 }
